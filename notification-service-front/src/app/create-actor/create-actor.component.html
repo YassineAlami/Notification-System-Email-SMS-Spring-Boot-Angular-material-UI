@@ -1,0 +1,54 @@
+<div class="container">
+
+  <div class="card-body text-center">
+    <h5 class="card-title mb-4">New Actor</h5>
+  </div>
+
+
+  <form #actorForm="ngForm" (ngSubmit)="saveActor(actorForm)">
+
+    <div class="text-center">
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline">
+        <mat-label class="required-label">Username</mat-label>
+        <input matInput type="text" name="username" [(ngModel)]="actor.username">
+      </mat-form-field>
+    </div>
+
+    <div class="text-center">
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline">
+        <mat-label class="required-label">Email</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="actor.email">
+      </mat-form-field>
+    </div>
+
+    <div class="text-center">
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline">
+        <mat-label class="required-label">Phone Number</mat-label>
+        <input matInput type="text" name="phoneNumber" [(ngModel)]="actor.phoneNumber">
+      </mat-form-field>
+    </div>
+
+
+
+    <div class="text-center">
+      <mat-form-field class="example-mini-width" appearance="outline" >
+        <mat-label>Sector</mat-label>
+        <mat-select name="sector" [(ngModel)]="actor.sector">
+          <mat-option *ngFor="let sector of sectors" [value]="sector">
+            {{ sector.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+
+      <div class="text-center mt-3">
+        <button mat-raised-button class="m-lg-3" color="primary" (click)="openSnackBar('Actor created successfully','ok')">Save</button>
+
+      </div>
+
+
+  </form>
+</div>
+

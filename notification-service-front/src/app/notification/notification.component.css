@@ -1,0 +1,35 @@
+.truncate-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 350px;
+}
+
+
+.custom-header-row {
+  background-color: rgb(30, 31, 34) !important; /* Dark background color */
+  color: white; /* Text color */
+}
+
+.green-svg {
+  fill: #27d227; /* Change the fill color to green */
+}
+
+.orange-svg {
+  fill: #f17333; /* Change the fill color to orange */
+}
+
+.red-svg {
+  fill: #ff0000;
+}
+.yellow-svg {
+  fill: #fff863;
+}
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+

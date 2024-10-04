@@ -1,0 +1,43 @@
+<div class="card-body text-center">
+  <h5 class="card-title mb-4">Display of Actors Along with Their Sectors</h5>
+</div>
+
+<table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z1">
+  <!-- Define the header row -->
+  <tr mat-header-row class="custom-header-row" *matHeaderRowDef="displayedColumns"></tr>
+
+  <!-- Define the 'id' column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th> <!-- Header for ID column -->
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td> <!-- Data for ID column -->
+  </ng-container>
+
+  <!-- Define the 'name' column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th> <!-- Header for Name column -->
+    <td mat-cell *matCellDef="let element"> {{element.username}} </td> <!-- Data for Name column -->
+  </ng-container>
+
+  <!-- Define the 'email' column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th> <!-- Header for Email column -->
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td> <!-- Data for Email column -->
+  </ng-container>
+
+  <!-- Define the 'phoneNumber' column -->
+  <ng-container matColumnDef="phoneNumber">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </th> <!-- Header for Phone Number column -->
+    <td mat-cell *matCellDef="let element"> {{element.phoneNumber}} </td> <!-- Data for Phone Number column -->
+  </ng-container>
+
+  <!-- Define the 'sector' column -->
+  <ng-container matColumnDef="sector">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Sector </th> <!-- Header for Sector column -->
+    <td mat-cell *matCellDef="let element"> {{element.sector.name}} </td> <!-- Data for Sector column -->
+  </ng-container>
+
+  <!-- Define the row content -->
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> <!-- Row definition for displaying data -->
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" showFirstLastButtons></mat-paginator> <!-- Paginator for navigation -->

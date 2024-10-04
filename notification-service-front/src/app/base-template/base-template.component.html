@@ -1,0 +1,114 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav m-auto">
+
+
+          <li  class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/base/home">Home</a></li>
+
+
+          <li *ngIf="authService.roles.includes('ADMIN')" routerLinkActive="active" class="nav-item dropdown" (mouseenter)="currentlyOpenDropdown = 'sectors'" (mouseleave)="currentlyOpenDropdown = null">
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sectors</a>
+            <div class="dropdown-menu" [class.show]="currentlyOpenDropdown === 'sectors'" aria-labelledby="dropdown04">
+              <a class="dropdown-item" routerLink="/base/sectors">Show Sectors</a>
+              <a class="dropdown-item" routerLink="/base/create-sector">Create Sectors</a>
+            </div>
+          </li>
+
+
+          <li *ngIf="authService.roles.includes('ADMIN')" routerLinkActive="active" class="nav-item dropdown" (mouseenter)="currentlyOpenDropdown = 'actors'" (mouseleave)="currentlyOpenDropdown = null">
+            <a class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actors</a>
+            <div class="dropdown-menu" [class.show]="currentlyOpenDropdown === 'actors'" aria-labelledby="dropdown04">
+              <a class="dropdown-item" routerLink="/base/actors">Show Actors</a>
+              <a class="dropdown-item" routerLink="/base/create-actor">Create Actor</a>
+            </div>
+          </li>
+
+
+          <li *ngIf="authService.roles.includes('ADMIN')" routerLinkActive="active" class="nav-item dropdown" (mouseenter)="currentlyOpenDropdown = 'notifications'" (mouseleave)="currentlyOpenDropdown = null">
+            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notifications</a>
+            <div class="dropdown-menu" [class.show]="currentlyOpenDropdown === 'notifications'" aria-labelledby="dropdown04">
+              <a class="dropdown-item" routerLink="/base/notifications">Show Notifications</a>
+              <a class="dropdown-item" routerLink="/base/create-notification">Create Notifications</a>
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+
+      <div class="username-container navbar-nav ml-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" *ngIf="authService.isAuthenticated">{{authService.username}}</a></li>
+        <li class="nav-item"><button type="button" class="btn btn-outline-danger" (click)="logout()">Logout</button></li>
+      </div>
+
+    </div>
+  </nav>
+  <!-- END nav -->
+
+
+
+
+<!--<mat-toolbar color="primary">
+
+  <span style="flex: auto">  </span>
+    <button mat-button routerLink="/base/home">Home</button>
+
+
+  <button *ngIf="authService.roles.includes('ADMIN')" mat-button  [matMenuTriggerFor]="actorMenu">
+    <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
+    Actors
+  </button>
+  <mat-menu #actorMenu>
+    <button *ngIf="authService.roles.includes('ADMIN')" mat-menu-item routerLink="/base/actors">Show Actors</button>
+    <button *ngIf="authService.roles.includes('ADMIN')" mat-menu-item routerLink="/base/create-actor">Create Actor</button>
+  </mat-menu>
+
+
+  <button *ngIf="authService.roles.includes('ADMIN')" mat-button  [matMenuTriggerFor]="sectorMenu">
+    <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
+    Sectors
+  </button>
+  <mat-menu #sectorMenu>
+    <button *ngIf="authService.roles.includes('ADMIN')" mat-menu-item routerLink="/base/sectors">Show Sectors</button>
+    <button *ngIf="authService.roles.includes('ADMIN')" mat-menu-item routerLink="/base/sectors">Show Sectors</button>
+  </mat-menu>
+
+
+  <button *ngIf="authService.roles.includes('ADMIN')" mat-button  [matMenuTriggerFor]="notificationMenu">
+      <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
+      Notifications
+    </button>
+  <mat-menu #notificationMenu>
+    <button mat-menu-item routerLink="/base/notifications">Show Notifications</button>
+    <button mat-menu-item routerLink="/base/create-notification">Create Notifications</button>
+    <button mat-menu-item routerLink="/base/home">Assign Notifications</button>
+  </mat-menu>
+
+
+    <button *ngIf="authService.roles.includes('ADMIN')" mat-button  [matMenuTriggerFor]="importMenu">
+      <mat-icon iconPositionEnd>keyboard_arrow_down</mat-icon>
+      Import
+    </button>
+    <mat-menu #importMenu>
+      <button mat-menu-item routerLink="/base/home">Import Template</button>
+      <button mat-menu-item routerLink="/base/home">Import something</button>
+    </mat-menu>
+
+  <button mat-button *ngIf="authService.isAuthenticated">{{authService.username}}</button>
+
+  <button mat-raised-button color="accent" (click)="logout()"> <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+</mat-toolbar>-->
+
+
+<div style="min-height: 600px">
+
+  <router-outlet></router-outlet>
+</div>

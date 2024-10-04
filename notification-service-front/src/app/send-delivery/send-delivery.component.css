@@ -1,0 +1,96 @@
+.example-card {
+  max-width: 300px;
+  width: calc(33.33% - 20px); /* Adjust width of cards as needed */
+  margin-bottom: 20px; /* Add margin between cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fixed-table-container {
+  height: 330px; /* Set the desired fixed height for the table */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the fixed height */
+}
+
+.fixed-table {
+  width: 100%; /* Ensure the table fills the container width */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: flex-start;*/
+  justify-content: center;
+  /*justify-content: space-evenly;*/
+}
+
+
+/*.example-card {
+  max-width: 400px;
+}*/
+
+.example-header-image {
+  /*background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');*/
+
+  background-size: cover;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+
+.custom-header-row {
+  background-color: rgb(30, 31, 34) !important; /* Dark background color */
+  color: white  /* Text color */
+}
+
+.custom-expansion-panel-header-row {
+  border-left: 4px solid #ff0f0f;
+}
+
+.red-icon {
+  color: #ff2d2d;
+}
+
+.green-icon {
+  color: #4dda00;
+}
+
+.delivery-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add vertical spacing between rows */
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+}
+
+.info-label {
+  font-weight: bold;
+  margin-right: 5px; /* Add horizontal spacing between label and value */
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; /* Adjust gap between cards as needed */
+}
+
+.centered-list {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center items vertically */
+}
+
+.read-only-link {
+  opacity: 0.2;
+  cursor: default;
+  color: #ccc;
+}

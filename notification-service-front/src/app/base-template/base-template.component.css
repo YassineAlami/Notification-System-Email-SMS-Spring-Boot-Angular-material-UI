@@ -1,0 +1,26 @@
+@media screen and (min-width:777px){
+  .nav-link {
+    padding:18px 0;
+    min-width:120px;
+  }
+  .navbar {
+    padding: 0
+  }
+}
+
+
+.logout-button {
+  height: 100%;
+  background-color: #90b24b;
+}
+
+.username-container {
+  display: flex;
+  align-items: stretch; /* Ensure the container stretches to fill the full height */
+}
+
+
+.red-icon {
+  color: #ff2d2d;
+
+}

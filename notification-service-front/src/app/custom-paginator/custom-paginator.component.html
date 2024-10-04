@@ -1,0 +1,21 @@
+<!--
+<div class="paginator">
+  <button class="paginator-button" (click)="previousPage()" [disabled]="!hasPreviousPage()">Previous</button>
+  <span class="paginator-info">Page {{ currentPage + 1 }} of {{ getNumberOfPages() }}</span>
+  <button class="paginator-button" (click)="nextPage()" [disabled]="!hasNextPage()">Next</button>
+</div>
+
+-->
+
+<div class="social-media ">
+  <p class="mb-0 d-flex">
+    <a type="button" class="d-flex align-items-center justify-content-center read-only-link" (click)="previousPage()" [class.read-only-link]="!hasPreviousPage()">
+      <mat-icon class="mb-1" svgIcon="back" aria-hidden="false" matTooltip="Previous Page"></mat-icon>
+    </a>
+    <span class="paginator-info px-3">Page {{ currentPage + 1 }} of {{ getNumberOfPages() }}</span>
+    <a type="button" class="d-flex align-items-center justify-content-center" (click)="nextPage()" [class.read-only-link]="!hasNextPage()">
+      <mat-icon class="mb-1" svgIcon="next" aria-hidden="false" matTooltip="Next Page"></mat-icon>
+    </a>
+
+  </p>
+</div>

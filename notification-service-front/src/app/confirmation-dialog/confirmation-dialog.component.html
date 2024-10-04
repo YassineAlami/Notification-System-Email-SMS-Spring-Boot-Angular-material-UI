@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Confirm Notification Send</h1>
+<mat-dialog-content>
+  <p>Are you sure you want to send notification emails to all targeted users?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialog(false)">Cancel</button>
+  <button mat-button color="primary" (click)="closeDialog(true)">Send</button>
+</mat-dialog-actions>

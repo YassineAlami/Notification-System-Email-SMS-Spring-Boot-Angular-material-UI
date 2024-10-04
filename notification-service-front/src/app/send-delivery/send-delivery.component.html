@@ -1,0 +1,260 @@
+<div class="card-body text-center">
+  <h5 class="card-title mb-4">{{this?.delivery?.name}} (No: {{deliveryId}})</h5>
+</div>
+
+<hr>
+
+
+
+
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header class="custom-expansion-panel-header-row">
+      <mat-panel-title >
+        General Information
+      </mat-panel-title>
+        <mat-icon svgIcon="info" aria-hidden="false"></mat-icon>
+    </mat-expansion-panel-header>
+
+
+
+
+
+    <div class="container">
+      <p class="card-body mb-3">
+        Information regarding this delivery which are not shown here are most likely to be unfilled.
+      </p>
+      <div class="row gy-4 gy-lg-0 align-items-lg-center">
+
+        <div class="col-md-3 " *ngIf="this.delivery?.state">
+          <div class="card border-0 border-bottom border-primary shadow-sm d-flex flex-column align-items-center">
+            <div class="card-body text-center p-1 p-xxl-1">
+              <h5 class="display-2 fw-bold mb-2">{{this.delivery.state}}</h5>
+              <p class="fs-5 mb-0 text-secondary">State</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 " *ngIf="this.delivery?.creationDate">
+          <div class="card border-0 border-bottom border-primary shadow-sm d-flex flex-column align-items-center">
+            <div class="card-body text-center p-1 p-xxl-1">
+              <h5 class="display-2 fw-bold mb-2">{{this.delivery.creationDate | date:'d/M/yy, h:mm a'}}</h5>
+              <p class="fs-5 mb-0 text-secondary">Creation Date</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 " *ngIf="this.delivery?.deliveryDate">
+          <div class="card border-0 border-bottom border-primary shadow-sm d-flex flex-column align-items-center">
+            <div class="card-body text-center p-1 p-xxl-1">
+              <h5 class="display-1 fw-bold mb-1">{{this.delivery.deliveryDate| date:'d/M/yy, h:mm a'}}</h5>
+              <p class="fs-5 mb-0 text-secondary">Delivery Date</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 " *ngIf="this.delivery?.estimatedDeliveryDate">
+          <div class="card border-0 border-bottom border-primary shadow-sm">
+            <div class="card-body text-center p-1 p-xxl-1">
+              <h5 class="display-2 fw-bold mb-2">{{this.delivery.estimatedDeliveryDate| date:'d/M/yy, h:mm a'}}</h5>
+              <p class="fs-5 mb-0 text-secondary">Estimated Delivery Date</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 " *ngIf="this.delivery?.deliveryMethod">
+          <div class="card border-0 border-bottom border-primary shadow-sm">
+            <div class="card-body text-center p-1 p-xxl-1">
+              <h5 class="display-2 fw-bold mb-2">{{this.delivery.deliveryMethod.name}}</h5>
+              <p class="fs-5 mb-0 text-secondary">Delivery Method</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 " *ngIf="this.delivery?.deliveryMethod">
+          <div class="card border-0 border-bottom border-primary shadow-sm">
+            <div class="card-body text-center p-1 p-xxl-1">
+              <h5 class="display-2 fw-bold mb-2">{{getNotificationsNumber()}}</h5>
+              <p class="fs-5 mb-0 text-secondary">Total Notifications</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 " *ngIf="this.delivery?.deliveryMethod">
+          <div class="card border-0 border-bottom border-primary shadow-sm">
+            <div class="card-body text-center p-1 p-xxl-1">
+              <h5 class="display-2 fw-bold mb-2">{{getTotalUsersInNotifications()}}</h5>
+              <p class="fs-5 mb-0 text-secondary">Users Concerned </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 " *ngIf="this.delivery?.deliveryMethod">
+          <div class="card border-0 border-bottom border-primary shadow-sm">
+            <div class="card-body text-center p-1 p-xxl-1">
+              <h5 class="display-2 fw-bold mb-2">{{getTotalTargetedSectors()}}</h5>
+              <p class="fs-5 mb-0 text-secondary">Sectors Concerned </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+
+
+
+
+
+
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+    <mat-expansion-panel-header class="custom-expansion-panel-header-row">
+      <mat-panel-title>
+        Notifications ({{getNotificationsNumber()}})
+      </mat-panel-title>
+
+      <mat-icon svgIcon="notification" aria-hidden="false"></mat-icon>
+    </mat-expansion-panel-header>
+
+
+
+
+
+
+      <!--<div class="col-md-6 d-flex justify-content-between card-row">-->
+    <div class="card-container">
+        <mat-card class="example-card"   *ngFor="let notification of notifications">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image">
+              <mat-icon svgIcon="event" aria-hidden="false" *ngIf="notification?.type?.name === 'Event'" [matTooltip]="notification?.type?.name"></mat-icon>
+              <mat-icon svgIcon="salary-change" aria-hidden="false" *ngIf="notification?.type?.name === 'Salary Change'" [matTooltip]="notification?.type?.name"></mat-icon>
+              <mat-icon svgIcon="new-policy" aria-hidden="false" *ngIf="notification?.type?.name === 'New Policy'" [matTooltip]="notification?.type?.name"></mat-icon>
+            </div>
+            <mat-card-title>Id: {{ notification.id }}</mat-card-title>
+            <mat-card-subtitle>{{ notification?.creationDate | date:'d/M/yy, h:mm a'}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <div *ngIf="notification.users?.length" class="fixed-table-container">
+            <table matSort mat-table [dataSource]="getDataSource(getVisibleUsers(notification))" class="mat-elevation-z1 fixed-table">
+              <tr mat-header-row class="custom-header-row" *matHeaderRowDef="displayedColumns"></tr>
+
+              <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                <td mat-cell *matCellDef="let user"> {{ user.id }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="username">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> User </th>
+                <td mat-cell *matCellDef="let user"> {{ user.username }} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="sector">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Sector </th>
+                <td mat-cell *matCellDef="let user"> {{ user.sector.name }} </td>
+              </ng-container>
+
+              <tr mat-row *matRowDef="let user; columns: displayedColumns;"></tr>
+            </table>
+
+          </div>
+
+          <custom-paginator *ngIf="notification.users?.length" [length]="notification.users.length" [pageSize]="5" (page)="onPageChange($event, notification)"></custom-paginator>
+
+          <mat-card-content style="flex-grow: 1;">
+            <p>{{ notification.content }}</p>
+          </mat-card-content>
+
+
+
+          <mat-list>
+            <mat-divider></mat-divider>
+            <mat-divider></mat-divider>
+            <mat-card-actions >
+              <mat-icon class="red-icon " type="button" svgIcon="delete" aria-hidden="false" matTooltip="Delete"></mat-icon>
+              <mat-icon (click)="sendEmailSingleNotification(notification)"  type="button" svgIcon="send" aria-hidden="false"
+                        *ngIf="notification?.users?.length" matTooltip="Send" class="ml-3"></mat-icon>
+              <mat-icon class="ml-3" type="button" svgIcon="update" aria-hidden="false" matTooltip="Update"></mat-icon>
+            </mat-card-actions>
+          </mat-list>
+
+
+
+        </mat-card>
+      </div>
+
+
+
+
+
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+
+
+
+
+
+
+
+
+
+
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+    <mat-expansion-panel-header class="custom-expansion-panel-header-row">
+      <mat-panel-title>
+        Deliver
+      </mat-panel-title>
+      <mat-icon svgIcon="send" aria-hidden="false"></mat-icon>
+    </mat-expansion-panel-header>
+
+
+
+
+    <form #emailForm="ngForm" (ngSubmit)="sendEmail()">
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline">
+        <mat-label class="required-label">Email</mat-label>
+        <input matInput type="email" name="to" [(ngModel)]="emailRequest.to" required>
+      </mat-form-field>
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline">
+        <mat-label class="required-label">Subject</mat-label>
+        <input matInput name="subject" [(ngModel)]="emailRequest.subject" required>
+      </mat-form-field>
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline">
+        <mat-label class="required-label">Body</mat-label>
+        <textarea matInput name="body" [(ngModel)]="emailRequest.body" required></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button class="m-lg-3" color="primary" type="submit">Send</button>
+    </form>
+
+
+
+
+
+
+    <mat-action-row>
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+      <button mat-button color="primary" (click)="sendEmailNotifications()">Send</button>
+
+
+    </mat-action-row>
+  </mat-expansion-panel>
+
+</mat-accordion>
+
+

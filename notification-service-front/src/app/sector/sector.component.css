@@ -1,0 +1,18 @@
+/*
+
+.custom-header-row {
+    background-color: rgb(30, 31, 34) !important; !* Dark background color *!
+    color: white; !* Text color *!
+}
+
+.template-inputs textarea {
+  height: auto; !* Allow automatic height adjustment *!
+}
+
+.template-inputs textarea:not([style*="height"]) {
+  min-height: 50px; !* Set minimum height *!
+  padding: 5px; !* Account for padding in calculations *!
+}
+*/
+
+

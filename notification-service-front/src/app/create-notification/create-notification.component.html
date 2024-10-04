@@ -1,0 +1,210 @@
+
+<div class="container">
+  <div class="card-body text-center">
+    <h5 class="card-title mb-4">New Notification</h5>
+  </div>
+
+
+  <div class="text-center example-form">
+    <form #notificationForm="ngForm" (ngSubmit)="saveNotification(notificationForm)">
+
+
+
+      <div class="text-center">
+        <!--Mandatory inputs for notification-->
+        <!-- Dropdown for Notification Type -->
+        <mat-form-field class="example-half-width" appearance="outline">
+          <mat-label class="required-label">Type</mat-label>
+          <mat-select name="type" [(ngModel)]="notification.type" (ngModelChange)="filterTemplates($event)">
+            <mat-option *ngFor="let notificationType of notificationTypes" [value]="notificationType">
+              {{ notificationType.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <!-- End of Dropdown for Notification Type -->
+
+
+        <!-- Dropdown for Template -->
+        <mat-form-field class="example-half-width ml-3" appearance="outline">
+          <mat-label class="required-label">Template</mat-label>
+          <mat-select name="template" [(ngModel)]="selectedTemplate" (ngModelChange)="updateTextareaContent()">
+            <mat-option *ngFor="let template of templates" [value]="template">
+              {{ template.title }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <!-- End of Dropdown for Template -->
+      </div>
+
+
+
+
+      <mat-form-field class="template-inputs" appearance="outline" *ngIf="showDateInput">
+        <mat-label class="required-label">Date</mat-label>
+        <input matInput [matDatepicker]="picker" (dateChange)="onDateChange($event)">
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline" *ngIf="showTimeInput">
+        <mat-label class="required-label">Time</mat-label>
+        <input matInput name="time" [(ngModel)]="time" (input)="onTimeChange()">
+      </mat-form-field>
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline" *ngIf="showTimeInput">
+        <mat-label class="required-label">Location</mat-label>
+        <input matInput name="location" [(ngModel)]="location" (input)="onLocationChange()">
+      </mat-form-field>
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline" *ngIf="showNameInput">
+        <mat-label class="required-label">Event Name</mat-label>
+        <input matInput name="name" [(ngModel)]="name" (input)="onNameChange()">
+      </mat-form-field>
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline" *ngIf="showReasonInput">
+        <mat-label class="required-label">Reasons</mat-label>
+        <input matInput name="reason" [(ngModel)]="reason" (input)="onReasonChange()">
+      </mat-form-field>
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline" *ngIf="showContactInfoInput">
+        <mat-label class="required-label">Contact Info</mat-label>
+        <input matInput name="contact" [(ngModel)]="contact" (input)="onContactChange()">
+      </mat-form-field>
+
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline" *ngIf="showSalaryInput">
+        <mat-label class="required-label">New Salary</mat-label>
+        <input matInput name="salary" [(ngModel)]="salary" (input)="onSalaryChange()">
+      </mat-form-field>
+
+
+
+
+
+      <div class="text-center mt-3">
+        <!-- Textarea for Template Body -->
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label class="required-label">Template Body</mat-label>
+          <button *ngIf="printable" class="float-right" mat-icon-button type="button" (click)="saveAsPDF()" aria-label="Example icon button with a vertical three dot icon">
+            <mat-icon>print</mat-icon>
+          </button>
+          <textarea id="textAreaId" matInput name="content" [value]="notification.content" readonly
+                    cdkTextareaAutosize
+                    cdkAutosizeMinRows="1"
+                    cdkAutosizeMaxRows="11"></textarea>
+        </mat-form-field>
+        <div>
+          The Fields with the signe * are Mandatory.
+        </div>
+
+        <hr>
+
+        <!-- End of Textarea for Template Body -->
+      </div>
+
+      <!--End of Mandatory inputs for notification-->
+
+
+
+      <!--Show/Hide optional inputs for new notifications-->
+      <section class="text-center example-section mb-3">
+        <mat-slide-toggle name="mySlideToggle" id="mySlideToggle"
+                          class="example-margin"
+                          [checked]="showOptionalInputs"
+                          (change)="toggleSelects()">
+          Assign Audience
+        </mat-slide-toggle>
+      </section>
+      <!--End of Show/Hide optional inputs for new notifications-->
+
+
+      <!--Optional inputs for new notifications-->
+      <div *ngIf="showSelects">
+
+
+
+        <div class="text-center">
+          <div class="text-center mt-3 paragraph" >
+
+            <p class="text-center example-full-width">
+              The following are optional fields for new notifications.
+              Please note that you can assign a whole Sector as audience for the created Notification.
+              Nonetheless, you can assign Actors individually, regardless of their Sector.
+            </p>
+
+          </div>
+
+
+          <!--Targeted Sectors-->
+          <mat-form-field class="example-mini-width" appearance="outline" >
+            <mat-label>Sector</mat-label>
+            <mat-select name="sector" [(ngModel)]="selectedSector">
+              <mat-option *ngFor="let sector of sectors" [value]="sector">
+                {{ sector.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+          <!--<button class="text-center ms-3"  mat-raised-button color="accent" type="button" (click)="assignActorsFromSector()"><mat-icon>favorite</mat-icon></button>-->
+          <button class="ms-3" mat-fab matTooltip="Accent" type="button" (click)="assignActorsFromSector()" color="accent">
+            <mat-icon>group_add</mat-icon>
+          </button>
+
+          <!--End of Targeted Sectors-->
+
+          <!--Targeted Actors-->
+          <mat-form-field class="example-mini-width ml-3" appearance="outline">
+            <mat-label>Actors</mat-label>
+            <mat-select name="actor" [(ngModel)]="selectedActor">
+              <mat-option *ngFor="let actor of actors" [value]="actor">
+                {{ actor.username }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+          <button class="ms-3 mt-5" mat-fab matTooltip="Accent" type="button" (click)="assignActor()" color="accent" aria-label="Example fab with a heart icon">
+            <mat-icon>person_add</mat-icon>
+          </button>
+          <!--End of Targeted Actors-->
+        </div>
+
+
+        <div class="text-center">
+          <!--Audience Display (Read-Only)-->
+          <mat-form-field class="example-full-width">
+            <mat-label>Audience</mat-label>
+            <textarea matInput name="audience" readonly>
+            {{ getAudienceUsernames() }}
+          </textarea>
+          </mat-form-field>
+          <!--End of Audience Display-->
+        </div>
+
+
+        <mat-form-field class="example-mini-width ml-3" appearance="outline">
+          <mat-label>Delivery</mat-label>
+          <mat-select name="delivery" [(ngModel)]="notification.delivery">
+            <mat-option *ngFor="let delivery of deliveries" [value]="delivery">
+              <mat-icon *ngIf="delivery.deliveryMethod.name === 'Email'">email</mat-icon>
+              <mat-icon *ngIf="delivery.deliveryMethod.name === 'SMS'">sms</mat-icon>
+              <mat-icon *ngIf="delivery.deliveryMethod.name === 'Call'">phone</mat-icon>
+              {{ delivery.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+      </div>
+      <!--End of Optional inputs for new notifications-->
+
+
+      <div class="text-center mt-3">
+        <button mat-raised-button color="accent" type="button" (click)="generateCustomizedTemplate()">Adjust Template</button>
+        <button mat-raised-button class="m-lg-3" color="primary" (click)="openSnackBar('Notification created successfully','ok')">Save</button>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+
+.example-form {
+  /*min-width: 150px;*/
+  /*max-width: 90%;*/
+  width: 100%;
+}
+.example-mini-width {
+  width: 24%;
+  /*margin-left: 15px;*/
+  /*font-size: 3px;*/
+}
+
+.example-half-width {
+  width: 30%;
+  /*margin-left: 15px;*/
+  /*font-size: 3px;*/
+}
+
+.template-inputs {
+  width: 20%;
+  /*margin-left: 15px;*/
+  /*font-size: 3px;*/
+}
+
+.example-full-width {
+  width: 61%;
+}
+
+.example-space-button {
+  margin-left: 15px;
+}
+
+.selected-users {
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-height: 200px; /* Optional: Add a max height to limit the displayed users */
+  overflow-y: auto; /* Optional: Add vertical scrollbar if the list exceeds max height */
+}
+
+
+.required-label::after {
+  content: "*";
+  color: red;
+  font-size: smaller; /* Adjust font size if needed */
+  margin-left: 5px; /* Adjust spacing between label and asterisk */
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.example-disabled {
+  display: inline-block;
+}

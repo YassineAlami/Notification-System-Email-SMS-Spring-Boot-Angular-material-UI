@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="card-body text-center">
+    <h5 class="card-title mb-4">New Sector</h5>
+  </div>
+
+
+  <form #sectorForm="ngForm" (ngSubmit)="saveSector(sectorForm)">
+    <div class="text-center">
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline">
+        <mat-label class="required-label">Name</mat-label>
+        <input matInput type="text" name="name" [(ngModel)]="sector.name">
+      </mat-form-field>
+    </div>
+
+    <div class="text-center">
+      <mat-form-field class="template-inputs mt-1 ml-2" appearance="outline">
+        <mat-label class="required-label">Description</mat-label>
+        <textarea  matInput name="description" [(ngModel)]="sector.description" cdkTextareaAutosize></textarea>
+      </mat-form-field>
+
+
+
+
+      <div class="text-center mt-3">
+        <button mat-raised-button class="m-lg-3" color="primary" (click)="openSnackBar('Sector created successfully','ok')">Save</button>
+
+
+
+
+      </div>
+      <!--<p-button label="Success" [rounded]="true" severity="success" /> <br>
+
+      <p-button label="Success" [text]="true" severity="success" />
+      <p-button label="Success" [text]="true" [raised]="true" severity="success" /><br>
+      <p-button label="Success" [outlined]="true" severity="success" /><br>
+      <p-button label="Submit" />-->
+    </div>
+  </form>
+</div>
+
