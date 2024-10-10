@@ -1,7 +1,15 @@
 
+
+**`This app aims to automate, simplify, and enhance the process of notifying employees across various companies. To achieve this goal, the system offers various channels, namely Emails, SMS, and postal mail. Each of these options is designed for specific scenarios and requires specific configurations to ensure effective communication`**
+
+
+###
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Architecture" alt="Typing SVG" /></a>
+
 Architecture : <br><br>
 
-Class Diagram:
+<b>Class Diagram</b>:
 
 ![image](https://github.com/user-attachments/assets/49c05cc2-e3ad-4549-ab31-42cb4bbf16cc)
 
@@ -13,6 +21,10 @@ sequence diagram : <br><br>
 
 ![image](https://github.com/user-attachments/assets/1aa4358b-df3e-46ce-b1c5-f08b8e1c434b)
 
+
+###
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Elements" alt="Typing SVG" /></a>
 
 Elements : <br><br>
 
@@ -33,6 +45,11 @@ This Delivery entity, essentially a collection of notification objects, has spec
 
 In summary, this notification system is based on an architecture of closely linked entities, with the Notification entity at its core. This entity orchestrates the creation, customization, and delivery of notifications by leveraging information from related entities. Thanks to the flexibility of templates and the ability to target entire sectors or individual users, the system allows for targeted and efficient communication.<br><br>
 
+
+###
+
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Introduction" alt="Typing SVG" /></a>
 
 Below are simulation videos showcasing the key features of the app. Each video demonstrates the use of various features, accompanied by a voice-over 🔇🔊 explanation.
 <br><br>
