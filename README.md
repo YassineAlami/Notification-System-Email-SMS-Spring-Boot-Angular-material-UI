@@ -25,7 +25,7 @@
 
 ###
 <p align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Elements" alt="Typing SVG" /></a></p>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Elements&center=true&vCenter=true" alt="Typing SVG" /></a></p>
 
 
 The Notification Entity, undoubtedly the pivotal and most crucial element of the system, is directly linked to all the other main entities. It houses the essential information concerning the managed notifications, as well as data from other entities necessary for the efficient creation and distribution of these notifications through a structured process, ensuring successful delivery to the targeted recipients.<br><br>
@@ -49,7 +49,7 @@ In summary, this notification system is based on an architecture of closely link
 ###
 
 <p align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Introduction" alt="Typing SVG" /></a></p>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Introduction&center=true&vCenter=true" alt="Typing SVG" /></a></p>
 
 Below are simulation videos showcasing the key features of the app. Each video demonstrates the use of various features, accompanied by a voice-over 🔇🔊 explanation.
 <br><br>
