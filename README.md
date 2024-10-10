@@ -9,7 +9,7 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Architecture&center=true&vCenter=true" alt="Typing SVG" /></a></p>
 
 
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=235&lines=Class+Diagram%3A" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=100&duration=1&pause=1000&color=BFF71B&width=235&lines=Class+Diagram%3A" alt="Typing SVG" /></a>
 
 ![image](https://github.com/user-attachments/assets/49c05cc2-e3ad-4549-ab31-42cb4bbf16cc)
 
