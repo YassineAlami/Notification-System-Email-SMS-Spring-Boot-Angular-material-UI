@@ -1,6 +1,40 @@
 
+Architecture : <br><br>
 
-Below are simulation videos showcasing the key features of the app. Each video demonstrates the use of various features, accompanied by a voice-over explanation.
+Class Diagram:
+
+![image](https://github.com/user-attachments/assets/49c05cc2-e3ad-4549-ab31-42cb4bbf16cc)
+
+ERD : <br><br>
+
+![image](https://github.com/user-attachments/assets/567d682c-2810-44c0-8217-d00d9b49a1e8)
+
+sequence diagram : <br><br>
+
+![image](https://github.com/user-attachments/assets/1aa4358b-df3e-46ce-b1c5-f08b8e1c434b)
+
+
+Elements : <br><br>
+
+The Notification Entity, undoubtedly the pivotal and most crucial element of the system, is directly linked to all the other main entities. It houses the essential information concerning the managed notifications, as well as data from other entities necessary for the efficient creation and distribution of these notifications through a structured process, ensuring successful delivery to the targeted recipients.<br><br>
+
+The content of each notification is generated from the available Templates, with each notification being associated with a specific Type that has multiple corresponding templates. Depending on the type selected during the creation of the notification, its content will adopt the structure of one of the templates belonging to the chosen type. Initially, these selected templates contain parameters and placeholders instead of actual values, which will be dynamically filled in by the user when creating the notification.<br><br>
+
+A User in our system is represented by their basic contact information, such as their email address for email notifications or their phone number for SMS or phone call notifications. Another property of the User Entity is the Sector, which corresponds to the organization they belong to.<br><br>
+
+The Audience of the notifications varies depending on the requirements. We can create a notification with one or more recipients. To facilitate targeting, system users can assign entire sectors to their notifications if needed, and can also specify individual recipients. Since the recipients of our notifications are lists of Users, the same applies to sectors.<br><br>
+
+A Delivery is a set of notifications intended to be sent simultaneously. Each instance of this object has three date attributes:<br>
+
+Creation Date: the date the delivery was created.<br>
+Send Date: the date when the delivery was actually sent.<br>
+Estimated Send Date: the planned date for sending the delivery. Once an estimated send date is set, the status of the notification automatically changes from "no status" to "pending."<br>
+This Delivery entity, essentially a collection of notification objects, has specifications such as a name and the channel through which it will be sent to its recipients. This channel is referred to as the Delivery Method. There are several delivery methods: we can send notifications to our recipients via email, SMS, or postal mail.<br><br>
+
+In summary, this notification system is based on an architecture of closely linked entities, with the Notification entity at its core. This entity orchestrates the creation, customization, and delivery of notifications by leveraging information from related entities. Thanks to the flexibility of templates and the ability to target entire sectors or individual users, the system allows for targeted and efficient communication.<br><br>
+
+
+Below are simulation videos showcasing the key features of the app. Each video demonstrates the use of various features, accompanied by a voice-over 🔇🔊 explanation.
 <br><br>
 
 Display of Notifications : <br><br>
@@ -29,9 +63,21 @@ Alternatively, the entire delivery can be sent, which includes all of its notifi
 
 https://github.com/user-attachments/assets/1ead14c7-32f2-4180-bb54-a86d8d947012
 
+<br><br>
+
+
+Homepage and Sectors :<br><br>
+
+
+
+https://github.com/user-attachments/assets/2f5da443-db0a-4dfb-9a94-6d3d91a1a89f
 
 
 
 
+Actors : <br><br>
+
+
+https://github.com/user-attachments/assets/24313f81-1ef3-4a5b-a1c4-5c448f7f4119
 
 
