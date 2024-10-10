@@ -1,4 +1,5 @@
-
+<p align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Introduction&center=true&vCenter=true" alt="Typing SVG" /></a></p>
 
 **`This app aims to automate, simplify, and enhance the process of notifying employees across various companies. To achieve this goal, the system offers various channels, namely Emails, SMS, and postal mail. Each of these options is designed for specific scenarios and requires specific configurations to ensure effective communication`**
 
@@ -49,7 +50,7 @@ In summary, this notification system is based on an architecture of closely link
 ###
 
 <p align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Introduction&center=true&vCenter=true" alt="Typing SVG" /></a></p>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Simulation&center=true&vCenter=true" alt="Typing SVG" /></a></p>
 
 Below are simulation videos showcasing the key features of the app. Each video demonstrates the use of various features, accompanied by a voice-over 🔇🔊 explanation.
 <br><br>
@@ -65,9 +66,6 @@ The last column of the table shows the notification's status. Clicking on it wil
 
 https://github.com/user-attachments/assets/6ba37f9b-cc39-4a3a-b54e-73a92b05ea4a
 
-<br><br>
-
-
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Creation+of+Notifications+" alt="Typing SVG" /></a>
 
 Creation of Notifications :<br><br>
@@ -80,22 +78,14 @@ https://github.com/user-attachments/assets/0ebb5e04-71d5-499f-94c9-7e0d9ab2876d
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Send+of+Deliveries" alt="Typing SVG" /></a>
 
-
-Send of Deliveries <br><br>
-
 On this page, we can view general statistics related to the delivery containing the selected notification, such as its status (pending, sent, etc.), the delivery method (email, SMS, etc.), and the number of recipients. There is also a section for visualizing and managing the various notifications within the delivery.<br><br>
 For each delivery, we can see a list of recipients and the message content. It is possible to send an individual notification from the delivery, but doing so will remove it from the current delivery and create a new one containing only that notification. <br><br>
 Alternatively, the entire delivery can be sent, which includes all of its notifications.<br><br>
 
 https://github.com/user-attachments/assets/1ead14c7-32f2-4180-bb54-a86d8d947012
 
-<br><br>
-
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Homepage+and+Sectors" alt="Typing SVG" /></a>
-
-Homepage and Sectors :<br><br>
-
 
 
 https://github.com/user-attachments/assets/2f5da443-db0a-4dfb-9a94-6d3d91a1a89f
@@ -103,9 +93,6 @@ https://github.com/user-attachments/assets/2f5da443-db0a-4dfb-9a94-6d3d91a1a89f
 
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Actors" alt="Typing SVG" /></a>
-
-Actors : <br><br>
-
 
 https://github.com/user-attachments/assets/24313f81-1ef3-4a5b-a1c4-5c448f7f4119
 
