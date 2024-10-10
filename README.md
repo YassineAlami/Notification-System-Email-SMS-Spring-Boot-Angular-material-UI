@@ -7,17 +7,18 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Architecture" alt="Typing SVG" /></a>
 
-Architecture : <br><br>
 
-<b>Class Diagram</b>:
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Class+Diagram%3A" alt="Typing SVG" /></a>
 
 ![image](https://github.com/user-attachments/assets/49c05cc2-e3ad-4549-ab31-42cb4bbf16cc)
 
-ERD : <br><br>
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=ERD" alt="Typing SVG" /></a>
 
 ![image](https://github.com/user-attachments/assets/567d682c-2810-44c0-8217-d00d9b49a1e8)
 
-sequence diagram : <br><br>
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Sequence+Diagram" alt="Typing SVG" /></a>
 
 ![image](https://github.com/user-attachments/assets/1aa4358b-df3e-46ce-b1c5-f08b8e1c434b)
 
@@ -26,7 +27,6 @@ sequence diagram : <br><br>
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=1&pause=1000&color=8EF720&width=435&lines=Elements" alt="Typing SVG" /></a>
 
-Elements : <br><br>
 
 The Notification Entity, undoubtedly the pivotal and most crucial element of the system, is directly linked to all the other main entities. It houses the essential information concerning the managed notifications, as well as data from other entities necessary for the efficient creation and distribution of these notifications through a structured process, ensuring successful delivery to the targeted recipients.<br><br>
 
@@ -54,6 +54,8 @@ In summary, this notification system is based on an architecture of closely link
 Below are simulation videos showcasing the key features of the app. Each video demonstrates the use of various features, accompanied by a voice-over 🔇🔊 explanation.
 <br><br>
 
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Display+of+Notifications" alt="Typing SVG" /></a>
+
 Display of Notifications : <br><br>
 Our app includes a page dedicated to displaying notifications in a table format, which contains all relevant details. <br>
 For the notification content column, which is essentially the message's body to be sent to recipients, only the first few words are visible. When the user hovers over the content column, a tooltip appears, showing the full message.<br><br>
@@ -65,6 +67,9 @@ https://github.com/user-attachments/assets/6ba37f9b-cc39-4a3a-b54e-73a92b05ea4a
 
 <br><br>
 
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Creation+of+Notifications+" alt="Typing SVG" /></a>
+
 Creation of Notifications :<br><br>
 To create a notification, the first step is to select its type. Each type has a list of associated templates. Once a template is chosen, dynamic input fields will appear, allowing the user to enter relevant data, such as the meeting date, location, and other specifics. These inputs vary depending on the selected template.<br><br>
 A notification can be created with just the type, template, and dynamic inputs. However, additional details can be added to complete the notification, such as specifying the recipients (targets). Users can also assign the notification to a particular delivery, if applicable.<br><br>
@@ -72,7 +77,11 @@ A notification can be created with just the type, template, and dynamic inputs. 
 https://github.com/user-attachments/assets/0ebb5e04-71d5-499f-94c9-7e0d9ab2876d
 
 
-Send Entier Deliveries Or Notification Per Notification <br><br>
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Send+of+Deliveries" alt="Typing SVG" /></a>
+
+
+Send of Deliveries <br><br>
 
 On this page, we can view general statistics related to the delivery containing the selected notification, such as its status (pending, sent, etc.), the delivery method (email, SMS, etc.), and the number of recipients. There is also a section for visualizing and managing the various notifications within the delivery.<br><br>
 For each delivery, we can see a list of recipients and the message content. It is possible to send an individual notification from the delivery, but doing so will remove it from the current delivery and create a new one containing only that notification. <br><br>
@@ -83,6 +92,8 @@ https://github.com/user-attachments/assets/1ead14c7-32f2-4180-bb54-a86d8d947012
 <br><br>
 
 
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Homepage+and+Sectors" alt="Typing SVG" /></a>
+
 Homepage and Sectors :<br><br>
 
 
@@ -91,6 +102,7 @@ https://github.com/user-attachments/assets/2f5da443-db0a-4dfb-9a94-6d3d91a1a89f
 
 
 
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=200&duration=1&pause=1000&color=BFF71B&width=435&lines=Actors" alt="Typing SVG" /></a>
 
 Actors : <br><br>
 
